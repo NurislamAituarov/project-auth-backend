@@ -18,7 +18,7 @@ app.use('/auth', router);
 
 async function start(req, res, next) {
   try {
-    await mongoose.connect(process.env.MONGO_URL, {
+    await mongoose.connect(process.env.MONGODB_CONNECT_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
